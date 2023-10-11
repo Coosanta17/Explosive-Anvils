@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "explosive_anvils",
+  "version": "1.0.0",
+  "name": "Explosive Anvils",
+  "authors": [
+    "coosa, MCreator"
+  ],
+  "contact": {
+    "homepage": "https://mcreator.net",
+    "sources": ""
+  },
+  "license": "Academic Free License v3.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.coosanta.explosive_anvils.ExplosiveAnvilsMod"
+    ],
+    "client": [
+      "net.coosanta.explosive_anvils.ClientInit"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": "~1.20",
+    "java": ">=17"
+  }
+}
