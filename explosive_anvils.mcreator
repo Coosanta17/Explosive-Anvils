@@ -14,13 +14,28 @@
           "src/main/resources/assets/explosive_anvils/models/item/explosive_anvil.json"
         ]
       }
+    },
+    {
+      "name": "ExplosiveAnvilFalling",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosive_anvil_falling",
+      "metadata": {
+        "files": [
+          "src/main/java/net/coosanta/explosive_anvils/entity/ExplosiveAnvilFallingEntity.java",
+          "src/main/java/net/coosanta/explosive_anvils/client/renderer/ExplosiveAnvilFallingRenderer.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.explosive_anvils.explosive_anvil": "Explosive Anvil"
+      "block.explosive_anvils.explosive_anvil": "Explosive Anvil",
+      "entity.explosive_anvils.explosive_anvil_falling": "Falling explosive anvil",
+      "item.explosive_anvils.explosive_anvil_falling_spawn_egg": "Falling explosive anvil Spawn Egg"
     }
   },
   "foldersRoot": {

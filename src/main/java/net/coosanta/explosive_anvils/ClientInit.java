@@ -16,6 +16,8 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ClientModInitializer;
 
+import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModModels;
+import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModEntityRenderers;
 import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModBlocks;
 
 @Environment(EnvType.CLIENT)
@@ -25,5 +27,7 @@ public class ClientInit implements ClientModInitializer {
 
 		ExplosiveAnvilsModBlocks.clientLoad();
 
+		ExplosiveAnvilsModModels.load();
+		ExplosiveAnvilsModEntityRenderers.load();
 	}
 }
