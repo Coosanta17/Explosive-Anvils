@@ -1,9 +1,27 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "ExplosiveAnvil",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosive_anvil",
+      "metadata": {
+        "files": [
+          "src/main/java/net/coosanta/explosive_anvils/block/ExplosiveAnvilBlock.java",
+          "src/main/resources/assets/explosive_anvils/models/block/explosive_anvil.json",
+          "src/main/resources/assets/explosive_anvils/blockstates/explosive_anvil.json",
+          "src/main/resources/assets/explosive_anvils/models/item/explosive_anvil.json"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "block.explosive_anvils.explosive_anvil": "Explosive Anvil"
+    }
   },
   "foldersRoot": {
     "name": "~",

@@ -1,0 +1,10 @@
+{
+  "parent": "explosive_anvils:custom/template_anvil",
+  "textures": {
+    "all": "explosive_anvils:block/anvil",
+    "particle": "explosive_anvils:block/anvil",
+    "top": "explosive_anvils:block/anvil_top",
+    "body": "explosive_anvils:block/anvil"
+  },
+  "render_type": "translucent"
+}
