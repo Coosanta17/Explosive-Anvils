@@ -6,5 +6,5 @@
     "top": "explosive_anvils:block/anvil_top",
     "body": "explosive_anvils:block/anvil"
   },
-  "render_type": "translucent"
+  "render_type": "solid"
 }

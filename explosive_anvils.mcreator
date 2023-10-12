@@ -3,7 +3,7 @@
     {
       "name": "ExplosiveAnvil",
       "type": "block",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "explosive_anvil",
       "metadata": {
@@ -13,7 +13,8 @@
           "src/main/resources/assets/explosive_anvils/blockstates/explosive_anvil.json",
           "src/main/resources/assets/explosive_anvils/models/item/explosive_anvil.json"
         ]
-      }
+      },
+      "path": "~/Default Explosive Anvil"
     },
     {
       "name": "ExplosiveAnvilFalling",
@@ -26,12 +27,14 @@
           "src/main/java/net/coosanta/explosive_anvils/entity/ExplosiveAnvilFallingEntity.java",
           "src/main/java/net/coosanta/explosive_anvils/client/renderer/ExplosiveAnvilFallingRenderer.java"
         ]
-      }
+      },
+      "path": "~/Default Explosive Anvil"
     },
     {
       "name": "SpawnFallingExplosiveAnvil",
       "type": "procedure",
-      "compiles": true,
+      "sortid": 2,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "spawn_falling_explosive_anvil",
       "metadata": {
@@ -54,7 +57,53 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Default Explosive Anvil"
+    },
+    {
+      "name": "ExplodeFallingExplosiveAnvil",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_falling_explosive_anvil",
+      "metadata": {
+        "files": [
+          "src/main/java/net/coosanta/explosive_anvils/procedures/ExplodeFallingExplosiveAnvilProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Default Explosive Anvil"
+    },
+    {
+      "name": "CraftExplosiveAnvil",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_explosive_anvil",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/explosive_anvils/recipes/explosive_anvil.json"
+        ]
+      },
+      "path": "~/Default Explosive Anvil"
     }
   ],
   "variable_elements": [],
@@ -68,7 +117,12 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Default Explosive Anvil",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "explosive_anvils",

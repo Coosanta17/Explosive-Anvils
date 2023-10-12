@@ -20,7 +20,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "TRANSLUCENT",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -146,8 +146,20 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "ExplodeFallingExplosiveAnvil"
+    },
     "onNeighbourBlockChanges": {
       "name": "SpawnFallingExplosiveAnvil"
+    },
+    "onDestroyedByExplosion": {
+      "name": "ExplodeFallingExplosiveAnvil"
+    },
+    "onRedstoneOn": {
+      "name": "ExplodeFallingExplosiveAnvil"
+    },
+    "onHitByProjectile": {
+      "name": "ExplodeFallingExplosiveAnvil"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
