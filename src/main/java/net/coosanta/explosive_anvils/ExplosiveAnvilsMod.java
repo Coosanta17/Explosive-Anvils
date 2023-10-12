@@ -17,6 +17,7 @@ import org.apache.logging.log4j.LogManager;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModProcedures;
 import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModItems;
 import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModEntities;
 import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModBlocks;
@@ -32,6 +33,8 @@ public class ExplosiveAnvilsMod implements ModInitializer {
 		ExplosiveAnvilsModEntities.load();
 		ExplosiveAnvilsModBlocks.load();
 		ExplosiveAnvilsModItems.load();
+
+		ExplosiveAnvilsModProcedures.load();
 
 	}
 }

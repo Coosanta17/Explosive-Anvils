@@ -1,16 +1,17 @@
 {
   "schemaVersion": 1,
   "id": "explosive_anvils",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "name": "Explosive Anvils",
+  "description": "Adds anvils, that explode!",
   "authors": [
-    "coosa, MCreator"
+    "Coosanta"
   ],
   "contact": {
-    "homepage": "https://mcreator.net",
+    "homepage": "https://github.com/Coosanta17/Explosive-Anvils",
     "sources": ""
   },
-  "license": "Academic Free License v3.0",
+  "license": "All Rights Reserved",
   "environment": "*",
   "entrypoints": {
     "main": [

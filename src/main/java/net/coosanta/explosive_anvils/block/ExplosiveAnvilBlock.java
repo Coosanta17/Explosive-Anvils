@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.TooltipFlag;
@@ -34,6 +35,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
+import net.coosanta.explosive_anvils.procedures.SpawnFallingExplosiveAnvilProcedure;
 import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModBlocks;
 
 import java.util.List;
@@ -114,6 +116,12 @@ public class ExplosiveAnvilBlock extends Block implements SimpleWaterloggedBlock
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
 		return Collections.singletonList(new ItemStack(this, 1));
+	}
+
+	@Override
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+		SpawnFallingExplosiveAnvilProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Environment(EnvType.CLIENT)

@@ -27,6 +27,34 @@
           "src/main/java/net/coosanta/explosive_anvils/client/renderer/ExplosiveAnvilFallingRenderer.java"
         ]
       }
+    },
+    {
+      "name": "SpawnFallingExplosiveAnvil",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_falling_explosive_anvil",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -45,10 +73,11 @@
   "workspaceSettings": {
     "modid": "explosive_anvils",
     "modName": "Explosive Anvils",
-    "version": "1.0.0",
-    "author": "coosa, MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Academic Free License v3.0",
+    "version": "0.1.0",
+    "description": "Adds anvils, that explode!",
+    "author": "Coosanta",
+    "websiteURL": "https://github.com/Coosanta17/Explosive-Anvils",
+    "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -56,6 +85,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "fabric-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.coosanta.explosive_anvils",
     "lockBaseModFiles": false
   },
