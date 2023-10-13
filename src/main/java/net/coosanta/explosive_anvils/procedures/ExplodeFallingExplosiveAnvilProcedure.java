@@ -8,6 +8,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
+import net.coosanta.explosive_anvils.ExplosiveAnvilsMod;
+
 public class ExplodeFallingExplosiveAnvilProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof ServerLevel _level) {
@@ -17,5 +19,6 @@ public class ExplodeFallingExplosiveAnvilProcedure {
 				_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 			_level.addFreshEntity(entityToSpawn);
 		}
+		ExplosiveAnvilsMod.LOGGER.debug(("An explosive anvil just exploded at " + x + ", " + y + ", " + z + "!"));
 	}
 }

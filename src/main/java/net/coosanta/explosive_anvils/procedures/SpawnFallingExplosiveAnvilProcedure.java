@@ -1,29 +1,22 @@
 package net.coosanta.explosive_anvils.procedures;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
-
-import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModEntities;
-import net.coosanta.explosive_anvils.entity.ExplosiveAnvilFallingEntity;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 public class SpawnFallingExplosiveAnvilProcedure {
-	public static boolean execute(LevelAccessor world, double x, double y, double z) {
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world.isEmptyBlock(BlockPos.containing(x, y - 1, z))) {
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
-			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = new ExplosiveAnvilFallingEntity(ExplosiveAnvilsModEntities.EXPLOSIVE_ANVIL_FALLING.get(), _level);
-				entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
-				if (entityToSpawn instanceof Mob _mobToSpawn)
-					_mobToSpawn.finalizeSpawn(_level, _level.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-				_level.addFreshEntity(entityToSpawn);
-			}
-			return true;
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"summon explosive_anvils:explosive_anvil_falling");
 		}
-		return false;
 	}
 }

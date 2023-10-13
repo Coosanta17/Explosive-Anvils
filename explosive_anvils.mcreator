@@ -3,7 +3,8 @@
     {
       "name": "ExplosiveAnvil",
       "type": "block",
-      "compiles": false,
+      "sortid": 4,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "explosive_anvil",
       "metadata": {
@@ -34,11 +35,13 @@
       "name": "SpawnFallingExplosiveAnvil",
       "type": "procedure",
       "sortid": 2,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "spawn_falling_explosive_anvil",
       "metadata": {
-        "return_type": "logic",
+        "files": [
+          "src/main/java/net/coosanta/explosive_anvils/procedures/SpawnFallingExplosiveAnvilProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
