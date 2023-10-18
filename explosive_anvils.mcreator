@@ -104,6 +104,39 @@
         ]
       },
       "path": "~/Default Explosive Anvil"
+    },
+    {
+      "name": "ShouldFallingExplosiveAnvilExplodeTick",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "should_falling_explosive_anvil_explode_tick",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/coosanta/explosive_anvils/procedures/ShouldFallingExplosiveAnvilExplodeTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Default Explosive Anvil"
     }
   ],
   "variable_elements": [],

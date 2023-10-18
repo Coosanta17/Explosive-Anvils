@@ -99,10 +99,19 @@
     "onStruckByLightning": {
       "name": "ExplodeFallingExplosiveAnvil"
     },
+    "whenMobDies": {
+      "name": "ExplodeFallingExplosiveAnvil"
+    },
     "whenMobIsHurt": {
       "name": "ExplodeFallingExplosiveAnvil"
     },
     "onRightClickedOn": {
+      "name": "ExplodeFallingExplosiveAnvil"
+    },
+    "onMobTickUpdate": {
+      "name": "ShouldFallingExplosiveAnvilExplodeTick"
+    },
+    "onPlayerCollidesWith": {
       "name": "ExplodeFallingExplosiveAnvil"
     },
     "hasAI": false,

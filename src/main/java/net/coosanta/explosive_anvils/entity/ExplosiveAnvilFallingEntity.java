@@ -28,6 +28,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.coosanta.explosive_anvils.procedures.ShouldFallingExplosiveAnvilExplodeTickProcedure;
 import net.coosanta.explosive_anvils.procedures.ExplodeFallingExplosiveAnvilProcedure;
 
 public class ExplosiveAnvilFallingEntity extends PathfinderMob {
@@ -127,6 +128,18 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 	}
 
 	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity sourceentity = source.getEntity();
+		Entity entity = this;
+		Level world = this.level();
+		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
+	}
+
+	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
@@ -138,6 +151,28 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 		Level world = this.level();
 		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
 		return retval;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level();
+		ShouldFallingExplosiveAnvilExplodeTickProcedure.execute(world, x, y, z);
+	}
+
+	@Override
+	public void playerTouch(Player sourceentity) {
+		super.playerTouch(sourceentity);
+		Entity entity = this;
+		Level world = this.level();
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
 	}
 
 	@Override
