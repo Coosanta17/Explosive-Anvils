@@ -71,9 +71,6 @@
       "locked_code": false,
       "registry_name": "explode_falling_explosive_anvil",
       "metadata": {
-        "files": [
-          "src/main/java/net/coosanta/explosive_anvils/procedures/ExplodeFallingExplosiveAnvilProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "x",

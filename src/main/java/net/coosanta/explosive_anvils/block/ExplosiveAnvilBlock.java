@@ -43,7 +43,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class ExplosiveAnvilBlock extends Block {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().sound(SoundType.ANVIL).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false);
+	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().sound(SoundType.ANVIL).strength(7f, 0f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public ExplosiveAnvilBlock() {

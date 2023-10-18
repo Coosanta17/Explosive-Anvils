@@ -22,8 +22,8 @@ public class ExplosiveAnvilsModEntities {
 	public static EntityType<ExplosiveAnvilFallingEntity> EXPLOSIVE_ANVIL_FALLING;
 
 	public static void load() {
-		EXPLOSIVE_ANVIL_FALLING = Registry.register(BuiltInRegistries.ENTITY_TYPE, new ResourceLocation(ExplosiveAnvilsMod.MODID, "explosive_anvil_falling"), FabricEntityTypeBuilder.create(MobCategory.MONSTER, ExplosiveAnvilFallingEntity::new)
-				.dimensions(new EntityDimensions(0.9f, 0.9f, true)).fireImmune().trackRangeBlocks(128).forceTrackedVelocityUpdates(true).trackedUpdateRate(3).build());
+		EXPLOSIVE_ANVIL_FALLING = Registry.register(BuiltInRegistries.ENTITY_TYPE, new ResourceLocation(ExplosiveAnvilsMod.MODID, "explosive_anvil_falling"),
+				FabricEntityTypeBuilder.create(MobCategory.MONSTER, ExplosiveAnvilFallingEntity::new).dimensions(new EntityDimensions(0.9f, 0.9f, true)).trackRangeBlocks(128).forceTrackedVelocityUpdates(true).trackedUpdateRate(3).build());
 		ExplosiveAnvilFallingEntity.init();
 		FabricDefaultAttributeRegistry.register(EXPLOSIVE_ANVIL_FALLING, ExplosiveAnvilFallingEntity.createAttributes());
 	}

@@ -64,8 +64,8 @@
     "specialInfo": [
       "Explodes when touched"
     ],
-    "hardness": 1.0,
-    "resistance": 10.0,
+    "hardness": 7.0,
+    "resistance": 0.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {

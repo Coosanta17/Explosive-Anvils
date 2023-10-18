@@ -57,7 +57,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 128,
     "followRange": 0,
-    "health": 1,
+    "health": 999,
     "xpAmount": 0,
     "waterMob": true,
     "flyingMob": false,
@@ -68,9 +68,9 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": true,
+    "immuneToFire": false,
     "immuneToArrows": false,
-    "immuneToFallDamage": false,
+    "immuneToFallDamage": true,
     "immuneToCactus": false,
     "immuneToDrowning": true,
     "immuneToLightning": false,
@@ -79,8 +79,8 @@
     "immuneToExplosion": false,
     "immuneToTrident": false,
     "immuneToAnvil": false,
-    "immuneToWither": true,
-    "immuneToDragonBreath": true,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
     "mobDrop": {
       "value": ""
     },
@@ -88,13 +88,22 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "block.anvil.place"
+      "value": ""
     },
     "deathSound": {
-      "value": "block.anvil.land"
+      "value": ""
     },
     "stepSound": {
       "value": ""
+    },
+    "onStruckByLightning": {
+      "name": "ExplodeFallingExplosiveAnvil"
+    },
+    "whenMobIsHurt": {
+      "name": "ExplodeFallingExplosiveAnvil"
+    },
+    "onRightClickedOn": {
+      "name": "ExplodeFallingExplosiveAnvil"
     },
     "hasAI": false,
     "aiBase": "(none)",

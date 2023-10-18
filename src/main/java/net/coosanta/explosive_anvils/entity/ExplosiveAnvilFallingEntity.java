@@ -3,7 +3,9 @@ package net.coosanta.explosive_anvils.entity;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.control.MoveControl;
@@ -12,15 +14,21 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
+
+import net.coosanta.explosive_anvils.procedures.ExplodeFallingExplosiveAnvilProcedure;
 
 public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 	public ExplosiveAnvilFallingEntity(EntityType<ExplosiveAnvilFallingEntity> type, Level world) {
@@ -81,27 +89,55 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.anvil.place"));
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation(""));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.anvil.land"));
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation(""));
+	}
+
+	@Override
+	public void thunderHit(ServerLevel serverWorld, LightningBolt lightningBolt) {
+		super.thunderHit(serverWorld, lightningBolt);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level();
+		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
 	}
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level();
+		Entity sourceentity = source.getEntity();
+		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
 		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+			return false;
+		if (source.is(DamageTypes.FALL))
 			return false;
 		if (source.is(DamageTypes.DROWN))
 			return false;
-		if (source.is(DamageTypes.DRAGON_BREATH))
-			return false;
-		if (source.is(DamageTypes.WITHER))
-			return false;
-		if (source.is(DamageTypes.WITHER_SKULL))
-			return false;
 		return super.hurt(source, amount);
+	}
+
+	@Override
+	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
+		ItemStack itemstack = sourceentity.getItemInHand(hand);
+		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
+		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level();
+		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
+		return retval;
 	}
 
 	@Override
@@ -138,7 +174,7 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0);
-		builder = builder.add(Attributes.MAX_HEALTH, 1);
+		builder = builder.add(Attributes.MAX_HEALTH, 999);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 0);
