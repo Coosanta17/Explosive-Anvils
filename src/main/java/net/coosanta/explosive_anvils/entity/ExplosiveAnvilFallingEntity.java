@@ -161,7 +161,7 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 		double z = this.getZ();
 		Entity entity = this;
 		Level world = this.level();
-		ShouldFallingExplosiveAnvilExplodeTickProcedure.execute(world, x, y, z);
+		ShouldFallingExplosiveAnvilExplodeTickProcedure.execute(world, x, y, z, entity);
 	}
 
 	@Override

@@ -71,6 +71,9 @@
       "locked_code": false,
       "registry_name": "explode_falling_explosive_anvil",
       "metadata": {
+        "files": [
+          "src/main/java/net/coosanta/explosive_anvils/procedures/ExplodeFallingExplosiveAnvilProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -119,6 +122,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -160,7 +167,7 @@
   "workspaceSettings": {
     "modid": "explosive_anvils",
     "modName": "Explosive Anvils",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "Adds anvils, that explode!",
     "author": "Coosanta",
     "websiteURL": "https://github.com/Coosanta17/Explosive-Anvils",

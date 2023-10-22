@@ -149,6 +149,9 @@
     "onRightClicked": {
       "name": "ExplodeFallingExplosiveAnvil"
     },
+    "onBlockAdded": {
+      "name": "SpawnFallingExplosiveAnvil"
+    },
     "onNeighbourBlockChanges": {
       "name": "SpawnFallingExplosiveAnvil"
     },
