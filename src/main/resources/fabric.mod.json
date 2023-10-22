@@ -12,6 +12,7 @@
     "sources": ""
   },
   "license": "All Rights Reserved",
+  "icon": "assets/explosive_anvils/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
