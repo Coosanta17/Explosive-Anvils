@@ -1,5 +1,8 @@
 {
+  "item.explosive_anvils.creeper_explosvie_anvil_falling_entity_spawn_egg": "Falling explosive creeper anvil Spawn Egg",
   "block.explosive_anvils.explosive_anvil": "Explosive Anvil",
   "entity.explosive_anvils.explosive_anvil_falling": "Falling explosive anvil",
+  "entity.explosive_anvils.creeper_explosvie_anvil_falling_entity": "Falling explosive creeper anvil",
+  "block.explosive_anvils.creeper_explosive_anvil": "Explosive Creeper Anvil",
   "item.explosive_anvils.explosive_anvil_falling_spawn_egg": "Falling explosive anvil Spawn Egg"
 }

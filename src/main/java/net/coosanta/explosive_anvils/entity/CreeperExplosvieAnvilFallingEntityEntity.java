@@ -28,11 +28,11 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import net.coosanta.explosive_anvils.procedures.ShouldFallingExplosiveAnvilExplodeTickProcedure;
-import net.coosanta.explosive_anvils.procedures.ExplodeFallingExplosiveAnvilProcedure;
+import net.coosanta.explosive_anvils.procedures.ShouldFallingCreeperExplosiveAnvilExplodeProcedure;
+import net.coosanta.explosive_anvils.procedures.ExplodeCreeperExplosiveAnvilProcedure;
 
-public class ExplosiveAnvilFallingEntity extends PathfinderMob {
-	public ExplosiveAnvilFallingEntity(EntityType<ExplosiveAnvilFallingEntity> type, Level world) {
+public class CreeperExplosvieAnvilFallingEntityEntity extends PathfinderMob {
+	public CreeperExplosvieAnvilFallingEntityEntity(EntityType<CreeperExplosvieAnvilFallingEntityEntity> type, Level world) {
 		super(type, world);
 		setMaxUpStep(0.6f);
 		xpReward = 0;
@@ -42,32 +42,32 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 		this.moveControl = new MoveControl(this) {
 			@Override
 			public void tick() {
-				if (ExplosiveAnvilFallingEntity.this.isInWater())
-					ExplosiveAnvilFallingEntity.this.setDeltaMovement(ExplosiveAnvilFallingEntity.this.getDeltaMovement().add(0, 0.005, 0));
-				if (this.operation == MoveControl.Operation.MOVE_TO && !ExplosiveAnvilFallingEntity.this.getNavigation().isDone()) {
-					double dx = this.wantedX - ExplosiveAnvilFallingEntity.this.getX();
-					double dy = this.wantedY - ExplosiveAnvilFallingEntity.this.getY();
-					double dz = this.wantedZ - ExplosiveAnvilFallingEntity.this.getZ();
+				if (CreeperExplosvieAnvilFallingEntityEntity.this.isInWater())
+					CreeperExplosvieAnvilFallingEntityEntity.this.setDeltaMovement(CreeperExplosvieAnvilFallingEntityEntity.this.getDeltaMovement().add(0, 0.005, 0));
+				if (this.operation == MoveControl.Operation.MOVE_TO && !CreeperExplosvieAnvilFallingEntityEntity.this.getNavigation().isDone()) {
+					double dx = this.wantedX - CreeperExplosvieAnvilFallingEntityEntity.this.getX();
+					double dy = this.wantedY - CreeperExplosvieAnvilFallingEntityEntity.this.getY();
+					double dz = this.wantedZ - CreeperExplosvieAnvilFallingEntityEntity.this.getZ();
 					float f = (float) (Mth.atan2(dz, dx) * (double) (180 / Math.PI)) - 90;
-					float f1 = (float) (this.speedModifier * ExplosiveAnvilFallingEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
-					ExplosiveAnvilFallingEntity.this.setYRot(this.rotlerp(ExplosiveAnvilFallingEntity.this.getYRot(), f, 10));
-					ExplosiveAnvilFallingEntity.this.yBodyRot = ExplosiveAnvilFallingEntity.this.getYRot();
-					ExplosiveAnvilFallingEntity.this.yHeadRot = ExplosiveAnvilFallingEntity.this.getYRot();
-					if (ExplosiveAnvilFallingEntity.this.isInWater()) {
-						ExplosiveAnvilFallingEntity.this.setSpeed((float) ExplosiveAnvilFallingEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
+					float f1 = (float) (this.speedModifier * CreeperExplosvieAnvilFallingEntityEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
+					CreeperExplosvieAnvilFallingEntityEntity.this.setYRot(this.rotlerp(CreeperExplosvieAnvilFallingEntityEntity.this.getYRot(), f, 10));
+					CreeperExplosvieAnvilFallingEntityEntity.this.yBodyRot = CreeperExplosvieAnvilFallingEntityEntity.this.getYRot();
+					CreeperExplosvieAnvilFallingEntityEntity.this.yHeadRot = CreeperExplosvieAnvilFallingEntityEntity.this.getYRot();
+					if (CreeperExplosvieAnvilFallingEntityEntity.this.isInWater()) {
+						CreeperExplosvieAnvilFallingEntityEntity.this.setSpeed((float) CreeperExplosvieAnvilFallingEntityEntity.this.getAttribute(Attributes.MOVEMENT_SPEED).getValue());
 						float f2 = -(float) (Mth.atan2(dy, (float) Math.sqrt(dx * dx + dz * dz)) * (180 / Math.PI));
 						f2 = Mth.clamp(Mth.wrapDegrees(f2), -85, 85);
-						ExplosiveAnvilFallingEntity.this.setXRot(this.rotlerp(ExplosiveAnvilFallingEntity.this.getXRot(), f2, 5));
-						float f3 = Mth.cos(ExplosiveAnvilFallingEntity.this.getXRot() * (float) (Math.PI / 180.0));
-						ExplosiveAnvilFallingEntity.this.setZza(f3 * f1);
-						ExplosiveAnvilFallingEntity.this.setYya((float) (f1 * dy));
+						CreeperExplosvieAnvilFallingEntityEntity.this.setXRot(this.rotlerp(CreeperExplosvieAnvilFallingEntityEntity.this.getXRot(), f2, 5));
+						float f3 = Mth.cos(CreeperExplosvieAnvilFallingEntityEntity.this.getXRot() * (float) (Math.PI / 180.0));
+						CreeperExplosvieAnvilFallingEntityEntity.this.setZza(f3 * f1);
+						CreeperExplosvieAnvilFallingEntityEntity.this.setYya((float) (f1 * dy));
 					} else {
-						ExplosiveAnvilFallingEntity.this.setSpeed(f1 * 0.05F);
+						CreeperExplosvieAnvilFallingEntityEntity.this.setSpeed(f1 * 0.05F);
 					}
 				} else {
-					ExplosiveAnvilFallingEntity.this.setSpeed(0);
-					ExplosiveAnvilFallingEntity.this.setYya(0);
-					ExplosiveAnvilFallingEntity.this.setZza(0);
+					CreeperExplosvieAnvilFallingEntityEntity.this.setSpeed(0);
+					CreeperExplosvieAnvilFallingEntityEntity.this.setYya(0);
+					CreeperExplosvieAnvilFallingEntityEntity.this.setZza(0);
 				}
 			}
 		};
@@ -106,7 +106,7 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 		double z = this.getZ();
 		Entity entity = this;
 		Level world = this.level();
-		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
+		ExplodeCreeperExplosiveAnvilProcedure.execute(world, x, y, z);
 	}
 
 	@Override
@@ -117,7 +117,7 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 		Entity entity = this;
 		Level world = this.level();
 		Entity sourceentity = source.getEntity();
-		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
+		ExplodeCreeperExplosiveAnvilProcedure.execute(world, x, y, z);
 		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
 		if (source.is(DamageTypes.FALL))
@@ -136,7 +136,7 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 		Entity sourceentity = source.getEntity();
 		Entity entity = this;
 		Level world = this.level();
-		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
+		ExplodeCreeperExplosiveAnvilProcedure.execute(world, x, y, z);
 	}
 
 	@Override
@@ -149,7 +149,7 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 		double z = this.getZ();
 		Entity entity = this;
 		Level world = this.level();
-		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
+		ExplodeCreeperExplosiveAnvilProcedure.execute(world, x, y, z);
 		return retval;
 	}
 
@@ -161,7 +161,7 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 		double z = this.getZ();
 		Entity entity = this;
 		Level world = this.level();
-		ShouldFallingExplosiveAnvilExplodeTickProcedure.execute(world, x, y, z, entity);
+		ShouldFallingCreeperExplosiveAnvilExplodeProcedure.execute(world, x, y, z, entity);
 	}
 
 	@Override
@@ -172,7 +172,7 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
-		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
+		ExplodeCreeperExplosiveAnvilProcedure.execute(world, x, y, z);
 	}
 
 	@Override

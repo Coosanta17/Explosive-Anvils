@@ -1,0 +1,48 @@
+{
+  "_fv": 47,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "explosive_anvil",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "REDSTONE",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.SKULL#4"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.SKULL#4"
+      },
+      {
+        "value": "CUSTOM:ExplosiveAnvil"
+      },
+      {
+        "value": "Items.SKULL#4"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.SKULL#4"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:CreeperExplosiveAnvil"
+    },
+    "name": "craft_creeper_explosive_anvil",
+    "namespace": "mod"
+  }
+}

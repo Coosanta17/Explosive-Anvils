@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Falling explosive anvil",
+    "mobName": "Falling explosive creeper anvil",
     "mobLabel": "",
     "mobModelName": "Modeltemplate_anvil_Converted",
     "mobModelTexture": "anvil.png",
@@ -97,22 +97,22 @@
       "value": ""
     },
     "onStruckByLightning": {
-      "name": "ExplodeFallingExplosiveAnvil"
+      "name": "ExplodeCreeperExplosiveAnvil"
     },
     "whenMobDies": {
-      "name": "ExplodeFallingExplosiveAnvil"
+      "name": "ExplodeCreeperExplosiveAnvil"
     },
     "whenMobIsHurt": {
-      "name": "ExplodeFallingExplosiveAnvil"
+      "name": "ExplodeCreeperExplosiveAnvil"
     },
     "onRightClickedOn": {
-      "name": "ExplodeFallingExplosiveAnvil"
+      "name": "ExplodeCreeperExplosiveAnvil"
     },
     "onMobTickUpdate": {
-      "name": "ShouldFallingExplosiveAnvilExplodeTick"
+      "name": "ShouldFallingCreeperExplosiveAnvilExplode"
     },
     "onPlayerCollidesWith": {
-      "name": "ExplodeFallingExplosiveAnvil"
+      "name": "ExplodeCreeperExplosiveAnvil"
     },
     "hasAI": false,
     "aiBase": "(none)",

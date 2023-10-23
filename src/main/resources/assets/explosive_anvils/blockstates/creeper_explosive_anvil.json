@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "explosive_anvils:block/creeper_explosive_anvil"
+    },
+    "facing=east": {
+      "model": "explosive_anvils:block/creeper_explosive_anvil",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "explosive_anvils:block/creeper_explosive_anvil",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "explosive_anvils:block/creeper_explosive_anvil",
+      "y": 270
+    }
+  }
+}

@@ -16,10 +16,13 @@ import net.coosanta.explosive_anvils.ExplosiveAnvilsMod;
 
 public class ExplosiveAnvilsModItems {
 	public static Item EXPLOSIVE_ANVIL;
+	public static Item CREEPER_EXPLOSIVE_ANVIL;
 
 	public static void load() {
 		EXPLOSIVE_ANVIL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ExplosiveAnvilsMod.MODID, "explosive_anvil"), new BlockItem(ExplosiveAnvilsModBlocks.EXPLOSIVE_ANVIL, new Item.Properties()));
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(content -> content.accept(EXPLOSIVE_ANVIL));
+		CREEPER_EXPLOSIVE_ANVIL = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(ExplosiveAnvilsMod.MODID, "creeper_explosive_anvil"), new BlockItem(ExplosiveAnvilsModBlocks.CREEPER_EXPLOSIVE_ANVIL, new Item.Properties()));
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(content -> content.accept(CREEPER_EXPLOSIVE_ANVIL));
 	}
 
 	public static void clientLoad() {
