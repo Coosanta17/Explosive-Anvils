@@ -10,6 +10,8 @@ import net.coosanta.explosive_anvils.procedures.ShouldFallingExplosiveAnvilExplo
 import net.coosanta.explosive_anvils.procedures.ShouldFallingCreeperExplosiveAnvilExplodeProcedure;
 import net.coosanta.explosive_anvils.procedures.ExplodeFallingExplosiveAnvilProcedure;
 import net.coosanta.explosive_anvils.procedures.ExplodeCreeperExplosiveAnvilProcedure;
+import net.coosanta.explosive_anvils.procedures.ConfigProcedure;
+import net.coosanta.explosive_anvils.procedures.CheckConfigExplosiveAnvilProcedure;
 
 @SuppressWarnings("InstantiationOfUtilityClass")
 public class ExplosiveAnvilsModProcedures {
@@ -20,5 +22,7 @@ public class ExplosiveAnvilsModProcedures {
 		new ShouldSpawnFallingCreeperExplosiveAnvilProcedure();
 		new ExplodeCreeperExplosiveAnvilProcedure();
 		new ShouldFallingCreeperExplosiveAnvilExplodeProcedure();
+		new ConfigProcedure();
+		new CheckConfigExplosiveAnvilProcedure();
 	}
 }

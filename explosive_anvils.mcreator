@@ -293,6 +293,55 @@
         ]
       },
       "path": "~/Creeper Explosive Anvil"
+    },
+    {
+      "name": "Config",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "config",
+      "metadata": {
+        "files": [
+          "src/main/java/net/coosanta/explosive_anvils/procedures/ConfigProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "CheckConfigExplosiveAnvil",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_config_explosive_anvil",
+      "metadata": {
+        "files": [
+          "src/main/java/net/coosanta/explosive_anvils/procedures/CheckConfigExplosiveAnvilProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
