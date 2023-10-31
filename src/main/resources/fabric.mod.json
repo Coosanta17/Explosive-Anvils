@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "explosive_anvils",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "name": "Explosive Anvils",
   "description": "Adds anvils, that explode!",
   "authors": [
@@ -11,7 +11,7 @@
     "homepage": "https://github.com/Coosanta17/Explosive-Anvils",
     "sources": ""
   },
-  "license": "GNU Lesser General Public License version 3 (LGPLv3)",
+  "license": "GNU Lesser General Public License version 2.1 (LGPLv2.1)",
   "icon": "assets/explosive_anvils/icon.png",
   "environment": "*",
   "entrypoints": {

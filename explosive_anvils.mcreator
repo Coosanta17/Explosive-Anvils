@@ -371,11 +371,11 @@
   "workspaceSettings": {
     "modid": "explosive_anvils",
     "modName": "Explosive Anvils",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Adds anvils, that explode!",
     "author": "Coosanta",
     "websiteURL": "https://github.com/Coosanta17/Explosive-Anvils",
-    "license": "GNU Lesser General Public License version 3 (LGPLv3)",
+    "license": "GNU Lesser General Public License version 2.1 (LGPLv2.1)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "mod_icon",
