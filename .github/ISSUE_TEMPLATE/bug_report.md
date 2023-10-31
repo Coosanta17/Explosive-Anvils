@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help us improve
 title: Anvil explodes when lit!
-labels: ''
+labels: bug
 assignees: ''
 
 ---

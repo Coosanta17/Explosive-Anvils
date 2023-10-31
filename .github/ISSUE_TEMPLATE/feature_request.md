@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: Nuke Anvil
-labels: ''
+labels: enhancement
 assignees: ''
 
 ---
