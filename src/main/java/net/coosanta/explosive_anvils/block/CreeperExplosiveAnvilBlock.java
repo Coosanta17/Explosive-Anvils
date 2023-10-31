@@ -37,6 +37,7 @@ import net.fabricmc.api.EnvType;
 
 import net.coosanta.explosive_anvils.procedures.ShouldSpawnFallingCreeperExplosiveAnvilProcedure;
 import net.coosanta.explosive_anvils.procedures.ExplodeCreeperExplosiveAnvilProcedure;
+import net.coosanta.explosive_anvils.procedures.CheckConfigExplosiveAnvilProcedure;
 import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModBlocks;
 
 import java.util.List;
@@ -107,7 +108,7 @@ public class CreeperExplosiveAnvilBlock extends Block {
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		ShouldSpawnFallingCreeperExplosiveAnvilProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		CheckConfigExplosiveAnvilProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
 	}
 
 	@Override

@@ -2,6 +2,8 @@ package net.coosanta.explosive_anvils.procedures;
 
 import net.minecraft.client.Minecraft;
 
+import net.coosanta.explosive_anvils.ExplosiveAnvilsMod;
+
 import java.io.IOException;
 import java.io.FileWriter;
 import java.io.File;
@@ -35,6 +37,8 @@ public class ConfigProcedure {
 					exception.printStackTrace();
 				}
 			}
+		} else {
+			ExplosiveAnvilsMod.LOGGER.error("Error loading config!");
 		}
 	}
 }

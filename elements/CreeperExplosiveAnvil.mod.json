@@ -150,7 +150,7 @@
       "name": "ExplodeCreeperExplosiveAnvil"
     },
     "onBlockAdded": {
-      "name": "ShouldSpawnFallingCreeperExplosiveAnvil"
+      "name": "CheckConfigExplosiveAnvil"
     },
     "onNeighbourBlockChanges": {
       "name": "ShouldSpawnFallingCreeperExplosiveAnvil"

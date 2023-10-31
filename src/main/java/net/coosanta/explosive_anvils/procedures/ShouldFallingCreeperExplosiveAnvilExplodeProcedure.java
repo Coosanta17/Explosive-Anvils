@@ -5,15 +5,13 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
 
 public class ShouldFallingCreeperExplosiveAnvilExplodeProcedure {
-	public static boolean execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
-			return false;
+			return;
 		if (!world.isEmptyBlock(BlockPos.containing(x, y - 1, z))) {
 			if (!entity.level().isClientSide())
 				entity.discard();
 			ExplodeCreeperExplosiveAnvilProcedure.execute(world, x, y, z);
-			return true;
 		}
-		return false;
 	}
 }
