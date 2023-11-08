@@ -8,7 +8,7 @@
     "mobModelTexture": "anvil.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
-      "fixedValue": true
+      "fixedValue": false
     },
     "modelWidth": 0.9,
     "modelHeight": 0.9,

@@ -203,16 +203,6 @@ public class CreeperExplosvieAnvilFallingEntityEntity extends PathfinderMob {
 	protected void pushEntities() {
 	}
 
-	@Override
-	public boolean canCollideWith(Entity entity) {
-		return true;
-	}
-
-	@Override
-	public boolean canBeCollidedWith() {
-		return true;
-	}
-
 	public static void init() {
 	}
 

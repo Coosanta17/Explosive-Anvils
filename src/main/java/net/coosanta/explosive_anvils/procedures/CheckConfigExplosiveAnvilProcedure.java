@@ -46,11 +46,11 @@ public class CheckConfigExplosiveAnvilProcedure {
 								Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);
 								world.destroyBlock(_pos, false);
 							}
-						} else {
-							SpawnFallingExplosiveAnvilProcedure.execute(world, x, y, z);
 							if (world instanceof ServerLevel _level)
 								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 										"tellraw @p {\"text\":\"Placing default explosive anvils aren't allowed!\",\"italic\":true,\"color\":\"red\"}");
+						} else {
+							SpawnFallingExplosiveAnvilProcedure.execute(world, x, y, z);
 						}
 					} else if (blockstate.getBlock() == ExplosiveAnvilsModBlocks.CREEPER_EXPLOSIVE_ANVIL) {
 						if (subObj.get("creeper_anvil").getAsBoolean() == false) {

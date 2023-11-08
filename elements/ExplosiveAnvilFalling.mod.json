@@ -8,7 +8,7 @@
     "mobModelTexture": "anvil.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
-      "fixedValue": true
+      "fixedValue": false
     },
     "modelWidth": 0.9,
     "modelHeight": 0.9,
@@ -57,9 +57,9 @@
     "armorBaseValue": 0.0,
     "trackingRange": 128,
     "followRange": 0,
-    "health": 999,
+    "health": 1024,
     "xpAmount": 0,
-    "waterMob": true,
+    "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
