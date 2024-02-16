@@ -1,9 +1,0 @@
-{
-  "_fv": 57,
-  "_type": "function",
-  "definition": {
-    "code": "#add scoreboard objectives\nexecute run scoreboard objectives add y_now dummy\nexecute run scoreboard objectives add y_old dummy\nexecute run scoreboard objectives add tick_delay_thing dummy\nexecute run scoreboard objectives add htweblbwtdbtowtyt dummy\n\n#change score to not run again\nexecute run scoreboard players set Coosanta htweblbwtdbtowtyt 1",
-    "name": "first_time_load",
-    "namespace": "mod"
-  }
-}

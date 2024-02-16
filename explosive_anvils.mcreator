@@ -392,17 +392,18 @@
       }
     },
     {
-      "name": "FuncFirstTimeLoad",
+      "name": "FallingDefaultAnvilTick",
       "type": "function",
       "sortid": 22,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "func_first_time_load",
+      "registry_name": "falling_default_anvil_tick",
       "metadata": {
         "files": [
-          "src/main/resources/data/explosive_anvils/functions/first_time_load.mcfunction"
+          "src/main/resources/data/explosive_anvils/functions/falling_default_anvil_tick.mcfunction"
         ]
-      }
+      },
+      "path": "~/Default Explosive Anvil"
     }
   ],
   "variable_elements": [],

@@ -1,3 +1,7 @@
-#runs first_time_load function if this world hasn't been loaded before with this datapack
+#add scoreboard objectives
+execute run scoreboard objectives add y_now dummy
+execute run scoreboard objectives add y_old dummy
+execute run scoreboard objectives add atick_delay
 
-execute if score Coosanta htweblbwtdbtowt matches ..0 run function explosive_anvils:first_time_load
+#sets tick_delay to two
+execute run scoreboard players set Coosanta atick_delay 0
