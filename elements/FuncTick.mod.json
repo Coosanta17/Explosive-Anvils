@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "function",
+  "definition": {
+    "code": "execute run scoreboard players set Coosanta tick_delay_thing 1",
+    "name": "anvil_tick",
+    "namespace": "mod"
+  }
+}

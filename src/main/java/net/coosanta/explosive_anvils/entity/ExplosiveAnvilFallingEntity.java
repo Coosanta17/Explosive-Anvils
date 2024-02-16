@@ -66,33 +66,28 @@ public class ExplosiveAnvilFallingEntity extends PathfinderMob {
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
+	public boolean hurt(DamageSource damagesource, float amount) {
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
-		Entity entity = this;
 		Level world = this.level();
-		Entity sourceentity = source.getEntity();
+		Entity entity = this;
+		Entity sourceentity = damagesource.getEntity();
+		Entity immediatesourceentity = damagesource.getDirectEntity();
 		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
-		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
-		if (source.is(DamageTypes.FALL))
+		if (damagesource.is(DamageTypes.FALL))
 			return false;
-		if (source.is(DamageTypes.DROWN))
+		if (damagesource.is(DamageTypes.DROWN))
 			return false;
-		return super.hurt(source, amount);
+		return super.hurt(damagesource, amount);
 	}
 
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity sourceentity = source.getEntity();
-		Entity entity = this;
-		Level world = this.level();
-		ExplodeFallingExplosiveAnvilProcedure.execute(world, x, y, z);
+		ExplodeFallingExplosiveAnvilProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

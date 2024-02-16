@@ -1,5 +1,5 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "anvil",
@@ -61,9 +61,11 @@
       }
     ],
     "name": "Explosive Anvil",
-    "specialInfo": [
-      "Explodes when touched"
-    ],
+    "specialInformation": {
+      "fixedValue": [
+        "Explodes when touched"
+      ]
+    },
     "hardness": 7.0,
     "resistance": 0.0,
     "hasGravity": false,
@@ -164,7 +166,7 @@
     "onHitByProjectile": {
       "name": "ExplodeFallingExplosiveAnvil"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

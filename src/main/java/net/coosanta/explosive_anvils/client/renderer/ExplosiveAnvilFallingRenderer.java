@@ -1,3 +1,4 @@
+
 package net.coosanta.explosive_anvils.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
@@ -16,4 +17,5 @@ public class ExplosiveAnvilFallingRenderer extends MobRenderer<ExplosiveAnvilFal
 	public ResourceLocation getTextureLocation(ExplosiveAnvilFallingEntity entity) {
 		return new ResourceLocation("explosive_anvils:textures/entities/anvil.png");
 	}
+
 }

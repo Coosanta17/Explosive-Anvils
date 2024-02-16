@@ -110,33 +110,28 @@ public class CreeperExplosvieAnvilFallingEntityEntity extends PathfinderMob {
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
+	public boolean hurt(DamageSource damagesource, float amount) {
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
-		Entity entity = this;
 		Level world = this.level();
-		Entity sourceentity = source.getEntity();
+		Entity entity = this;
+		Entity sourceentity = damagesource.getEntity();
+		Entity immediatesourceentity = damagesource.getDirectEntity();
 		ExplodeCreeperExplosiveAnvilProcedure.execute(world, x, y, z);
-		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
-		if (source.is(DamageTypes.FALL))
+		if (damagesource.is(DamageTypes.FALL))
 			return false;
-		if (source.is(DamageTypes.DROWN))
+		if (damagesource.is(DamageTypes.DROWN))
 			return false;
-		return super.hurt(source, amount);
+		return super.hurt(damagesource, amount);
 	}
 
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity sourceentity = source.getEntity();
-		Entity entity = this;
-		Level world = this.level();
-		ExplodeCreeperExplosiveAnvilProcedure.execute(world, x, y, z);
+		ExplodeCreeperExplosiveAnvilProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
@@ -176,18 +171,18 @@ public class CreeperExplosvieAnvilFallingEntityEntity extends PathfinderMob {
 	}
 
 	@Override
-	public boolean canBreatheUnderwater() {
-		return true;
-	}
-
-	@Override
 	public boolean checkSpawnObstruction(LevelReader world) {
 		return world.isUnobstructed(this);
 	}
 
 	@Override
-	public boolean isPushedByFluid() {
-		return false;
+	public boolean canBreatheUnderwater() {
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Level world = this.level();
+		Entity entity = this;
+		return true;
 	}
 
 	@Override

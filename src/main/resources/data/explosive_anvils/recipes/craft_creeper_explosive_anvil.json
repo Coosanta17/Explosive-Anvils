@@ -3,25 +3,16 @@
   "group": "explosive_anvil",
   "category": "redstone",
   "pattern": [
-    " 1 ",
-    "345",
-    " 7 "
+    " a ",
+    "aba",
+    " a "
   ],
   "key": {
-    "1": {
+    "a": {
       "item": "minecraft:creeper_head"
     },
-    "3": {
-      "item": "minecraft:creeper_head"
-    },
-    "4": {
+    "b": {
       "item": "explosive_anvils:explosive_anvil"
-    },
-    "5": {
-      "item": "minecraft:creeper_head"
-    },
-    "7": {
-      "item": "minecraft:creeper_head"
     }
   },
   "result": {

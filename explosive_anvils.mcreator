@@ -9,10 +9,10 @@
       "registry_name": "explosive_anvil",
       "metadata": {
         "files": [
+          "src/main/resources/assets/explosive_anvils/models/item/explosive_anvil.json",
           "src/main/java/net/coosanta/explosive_anvils/block/ExplosiveAnvilBlock.java",
-          "src/main/resources/assets/explosive_anvils/models/block/explosive_anvil.json",
           "src/main/resources/assets/explosive_anvils/blockstates/explosive_anvil.json",
-          "src/main/resources/assets/explosive_anvils/models/item/explosive_anvil.json"
+          "src/main/resources/assets/explosive_anvils/models/block/explosive_anvil.json"
         ]
       },
       "path": "~/Default Explosive Anvil"
@@ -21,7 +21,7 @@
       "name": "ExplosiveAnvilFalling",
       "type": "livingentity",
       "sortid": 8,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "explosive_anvil_falling",
       "metadata": {
@@ -168,13 +168,13 @@
       "name": "CreeperExplosvieAnvilFallingEntity",
       "type": "livingentity",
       "sortid": 7,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "creeper_explosvie_anvil_falling_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/coosanta/explosive_anvils/entity/CreeperExplosvieAnvilFallingEntityEntity.java",
-          "src/main/java/net/coosanta/explosive_anvils/client/renderer/CreeperExplosvieAnvilFallingEntityRenderer.java"
+          "src/main/java/net/coosanta/explosive_anvils/client/renderer/CreeperExplosvieAnvilFallingEntityRenderer.java",
+          "src/main/java/net/coosanta/explosive_anvils/entity/CreeperExplosvieAnvilFallingEntityEntity.java"
         ]
       },
       "path": "~/Creeper Explosive Anvil"
@@ -315,9 +315,6 @@
       "locked_code": false,
       "registry_name": "check_config_explosive_anvil",
       "metadata": {
-        "files": [
-          "src/main/java/net/coosanta/explosive_anvils/procedures/CheckConfigExplosiveAnvilProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "blockstate",
@@ -339,6 +336,71 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "FuncLoad",
+      "type": "function",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "func_load",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/explosive_anvils/functions/anvil_load.mcfunction"
+        ]
+      }
+    },
+    {
+      "name": "TickFunctions",
+      "type": "tag",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tick_functions",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/functions/tick.json"
+        ]
+      }
+    },
+    {
+      "name": "FuncTick",
+      "type": "function",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "func_tick",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/explosive_anvils/functions/anvil_tick.mcfunction"
+        ]
+      }
+    },
+    {
+      "name": "LoadFunctions",
+      "type": "tag",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "load_functions",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/functions/load.json"
+        ]
+      }
+    },
+    {
+      "name": "FuncFirstTimeLoad",
+      "type": "function",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "func_first_time_load",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/explosive_anvils/functions/first_time_load.mcfunction"
         ]
       }
     }
@@ -388,5 +450,5 @@
     "modElementsPackage": "net.coosanta.explosive_anvils",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300336712
+  "mcreatorVersion": 202300452316
 }

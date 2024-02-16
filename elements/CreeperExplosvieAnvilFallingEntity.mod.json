@@ -1,15 +1,15 @@
 {
-  "_fv": 47,
+  "_fv": 57,
   "_type": "livingentity",
   "definition": {
     "mobName": "Falling explosive creeper anvil",
     "mobLabel": "",
     "mobModelName": "Modeltemplate_anvil_Converted",
     "mobModelTexture": "anvil.png",
-    "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
     },
+    "modelLayers": [],
     "modelWidth": 0.9,
     "modelHeight": 0.9,
     "modelShadowSize": 0.9,
@@ -60,6 +60,9 @@
     "health": 999,
     "xpAmount": 0,
     "waterMob": true,
+    "breatheUnderwater": {
+      "fixedValue": true
+    },
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
@@ -96,6 +99,7 @@
     "stepSound": {
       "value": ""
     },
+    "entityDataEntries": [],
     "onStruckByLightning": {
       "name": "ExplodeCreeperExplosiveAnvil"
     },

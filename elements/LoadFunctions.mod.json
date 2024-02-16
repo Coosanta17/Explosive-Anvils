@@ -1,0 +1,17 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Functions",
+    "items": [],
+    "blocks": [],
+    "functions": [
+      "FuncLoad"
+    ],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "load",
+    "namespace": "minecraft"
+  }
+}

@@ -3,37 +3,16 @@
   "group": "explosive_anvil",
   "category": "redstone",
   "pattern": [
-    "012",
-    "345",
-    "678"
+    "aaa",
+    "aba",
+    "aaa"
   ],
   "key": {
-    "0": {
+    "a": {
       "item": "minecraft:tnt"
     },
-    "1": {
-      "item": "minecraft:tnt"
-    },
-    "2": {
-      "item": "minecraft:tnt"
-    },
-    "3": {
-      "item": "minecraft:tnt"
-    },
-    "4": {
+    "b": {
       "item": "minecraft:anvil"
-    },
-    "5": {
-      "item": "minecraft:tnt"
-    },
-    "6": {
-      "item": "minecraft:tnt"
-    },
-    "7": {
-      "item": "minecraft:tnt"
-    },
-    "8": {
-      "item": "minecraft:tnt"
     }
   },
   "result": {

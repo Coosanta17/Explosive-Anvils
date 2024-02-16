@@ -1,0 +1,1 @@
+execute run scoreboard players set Coosanta tick_delay_thing 1
