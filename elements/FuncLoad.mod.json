@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "function",
   "definition": {
-    "code": "#add scoreboard objectives\nexecute run scoreboard objectives add y_now dummy\nexecute run scoreboard objectives add y_old dummy\nexecute run scoreboard objectives add atick_delay\n\n#sets tick_delay to two\nexecute run scoreboard players set Coosanta atick_delay 0",
+    "code": "#add scoreboard objectives\nexecute run scoreboard objectives add y_now dummy\nexecute run scoreboard objectives add y_old dummy\nexecute run scoreboard objectives add atick_delay\n\n#sets tick_delay to zero\nexecute run scoreboard players set Coosanta atick_delay 0",
     "name": "anvil_load",
     "namespace": "mod"
   }

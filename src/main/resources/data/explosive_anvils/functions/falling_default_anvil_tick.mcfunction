@@ -1,1 +1,2 @@
 # Enter the function code here
+execute run summon armor_stand ~ ~ ~ {Invisible:1b,NoBasePlate:1b,Invulnerable:1b,Tags:["falling_explosive_anvil","normal"],ArmorItems:[{id:"minecraft:anvil",Count:1}],ArmorDropChances:[f]}

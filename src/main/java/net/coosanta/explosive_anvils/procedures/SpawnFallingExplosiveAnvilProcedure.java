@@ -16,7 +16,7 @@ public class SpawnFallingExplosiveAnvilProcedure {
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"summon explosive_anvils:explosive_anvil_falling");
+						"summon armor_stand ~ ~ ~ {Invisible:1b,NoBasePlate:1b,Invulnerable:1b,Tags:[\"falling_explosive_anvil\",\"normal\"],ArmorItems:[{id:\"minecraft:anvil\",Count:1}],ArmorDropChances:[f]}");
 		}
 	}
 }
