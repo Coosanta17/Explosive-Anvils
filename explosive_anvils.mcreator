@@ -18,21 +18,6 @@
       "path": "~/Default Explosive Anvil"
     },
     {
-      "name": "ExplosiveAnvilFalling",
-      "type": "livingentity",
-      "sortid": 8,
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "explosive_anvil_falling",
-      "metadata": {
-        "files": [
-          "src/main/java/net/coosanta/explosive_anvils/entity/ExplosiveAnvilFallingEntity.java",
-          "src/main/java/net/coosanta/explosive_anvils/client/renderer/ExplosiveAnvilFallingRenderer.java"
-        ]
-      },
-      "path": "~/Default Explosive Anvil"
-    },
-    {
       "name": "SpawnFallingExplosiveAnvil",
       "type": "procedure",
       "sortid": 2,
@@ -160,21 +145,6 @@
           "src/main/resources/assets/explosive_anvils/models/item/creeper_explosive_anvil.json",
           "src/main/resources/assets/explosive_anvils/blockstates/creeper_explosive_anvil.json",
           "src/main/resources/assets/explosive_anvils/models/block/creeper_explosive_anvil.json"
-        ]
-      },
-      "path": "~/Creeper Explosive Anvil"
-    },
-    {
-      "name": "CreeperExplosvieAnvilFallingEntity",
-      "type": "livingentity",
-      "sortid": 7,
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "creeper_explosvie_anvil_falling_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/coosanta/explosive_anvils/client/renderer/CreeperExplosvieAnvilFallingEntityRenderer.java",
-          "src/main/java/net/coosanta/explosive_anvils/entity/CreeperExplosvieAnvilFallingEntityEntity.java"
         ]
       },
       "path": "~/Creeper Explosive Anvil"
@@ -404,18 +374,70 @@
         ]
       },
       "path": "~/Default Explosive Anvil"
+    },
+    {
+      "name": "ExplodeDefaultFallingExplosiveAnvil",
+      "type": "function",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_default_falling_explosive_anvil",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/explosive_anvils/functions/explode_default_falling_explosive_anvil.mcfunction"
+        ]
+      },
+      "path": "~/Default Explosive Anvil"
+    },
+    {
+      "name": "FallingCreeperAnvilTick",
+      "type": "function",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "falling_creeper_anvil_tick",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/explosive_anvils/functions/falling_creeper_anvil_tick.mcfunction"
+        ]
+      },
+      "path": "~/Creeper Explosive Anvil"
+    },
+    {
+      "name": "ExplodeCreeperFallingExplosiveAnvil",
+      "type": "function",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_creeper_falling_explosive_anvil",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/explosive_anvils/functions/explode_creeper_falling_explosive_anvil.mcfunction"
+        ]
+      },
+      "path": "~/Creeper Explosive Anvil"
+    },
+    {
+      "name": "ReleaseTheCreepers",
+      "type": "function",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "release_the_creepers",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/explosive_anvils/functions/release_the_creepers.mcfunction"
+        ]
+      },
+      "path": "~/Creeper Explosive Anvil"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.explosive_anvils.creeper_explosvie_anvil_falling_entity_spawn_egg": "Falling explosive creeper anvil Spawn Egg",
       "block.explosive_anvils.explosive_anvil": "Explosive Anvil",
-      "entity.explosive_anvils.explosive_anvil_falling": "Falling explosive anvil",
-      "entity.explosive_anvils.creeper_explosvie_anvil_falling_entity": "Falling explosive creeper anvil",
-      "block.explosive_anvils.creeper_explosive_anvil": "Explosive Creeper Anvil",
-      "item.explosive_anvils.explosive_anvil_falling_spawn_egg": "Falling explosive anvil Spawn Egg"
+      "block.explosive_anvils.creeper_explosive_anvil": "Explosive Creeper Anvil"
     }
   },
   "foldersRoot": {

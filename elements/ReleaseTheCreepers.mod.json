@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "function",
+  "definition": {
+    "code": "execute run summon minecraft:creeper ~-4 ~1 ~4\nexecute run summon minecraft:creeper ~4 ~1 ~-4\nexecute run summon minecraft:creeper ~-4 ~1 ~-4\nexecute run summon minecraft:creeper ~4 ~1 ~4",
+    "name": "release_the_creepers",
+    "namespace": "mod"
+  }
+}

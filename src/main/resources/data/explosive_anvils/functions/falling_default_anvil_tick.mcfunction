@@ -1,2 +1,2 @@
-# Enter the function code here
-execute run summon armor_stand ~ ~ ~ {Invisible:1b,NoBasePlate:1b,Invulnerable:1b,Tags:["falling_explosive_anvil","normal"],ArmorItems:[{id:"minecraft:anvil",Count:1}],ArmorDropChances:[f]}
+#summon armor_stand ~ ~ ~ {Invisible:1b,NoBasePlate:1b,DisabledSlots:4144959,Invulnerable:1b,Tags:["falling_exploding_anvils","default_fea"],ArmorItems:[{id:anvil,Count:1}],ArmorDropChances:[f]}
+execute as @e[tag=default_fea] unless block ~ ~-0.01 ~ air run function explosive_anvils:explode_default_falling_explosive_anvil

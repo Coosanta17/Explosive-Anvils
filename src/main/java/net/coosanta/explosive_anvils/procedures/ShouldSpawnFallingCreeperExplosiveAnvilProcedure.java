@@ -16,7 +16,7 @@ public class ShouldSpawnFallingCreeperExplosiveAnvilProcedure {
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"summon explosive_anvils:creeper_explosvie_anvil_falling_entity");
+						"summon armor_stand ~ ~ ~ {Invisible:1b,NoBasePlate:1b,DisabledSlots:4144959,Invulnerable:1b,Tags:[\"falling_exploding_anvils\",\"creeper_fea\"],ArmorItems:[{id:anvil,Count:1}],ArmorDropChances:[f]}");
 		}
 	}
 }

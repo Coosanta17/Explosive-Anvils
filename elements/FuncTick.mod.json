@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "function",
   "definition": {
-    "code": "#Resets score if >= 3\nexecute if score Coosanta atick_delay matches 3.. run scoreboard players set Coosanta atick_delay 0\n\n#runs function explosive_anvils:falling_default_anvil_tick if score <= 0\nexecute if score Coosanta atick_delay matches ..0 run function explosive_anvils:falling_default_anvil_tick\n\n#adds 1 to score\nexecute run scoreboard players add Coosanta atick_delay 1",
+    "code": "##Resets score if >= 3\n#execute if score Coosanta atick_delay matches 3.. run scoreboard players set Coosanta atick_delay 0\n#\n##runs function explosive_anvils:falling_default_anvil_tick if score <= 0\n#execute if score Coosanta atick_delay matches ..0 run function explosive_anvils:falling_default_anvil_tick\n#\n##adds 1 to score\n#execute run scoreboard players add Coosanta atick_delay 1\n\nexecute run function explosive_anvils:falling_default_anvil_tick\nexecute run function explosive_anvils:falling_creeper_anvil_tick",
     "name": "anvil_tick",
     "namespace": "mod"
   }

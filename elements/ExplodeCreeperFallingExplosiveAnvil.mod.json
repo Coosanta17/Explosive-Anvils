@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "function",
+  "definition": {
+    "code": "execute run summon minecraft:tnt ~ ~ ~\nexecute run scoreboard players set @s catick_delay 0",
+    "name": "explode_creeper_falling_explosive_anvil",
+    "namespace": "mod"
+  }
+}

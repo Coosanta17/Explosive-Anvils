@@ -1,0 +1,9 @@
+{
+  "_fv": 57,
+  "_type": "function",
+  "definition": {
+    "code": "execute run kill @s\nexecute run summon minecraft:tnt ~ ~ ~",
+    "name": "explode_default_falling_explosive_anvil",
+    "namespace": "mod"
+  }
+}
