@@ -463,7 +463,7 @@
     "license": "GNU Lesser General Public License version 2.1 (LGPLv2.1)",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
-    "modPicture": "mod_icon",
+    "modPicture": "anvil_firing_launch",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
