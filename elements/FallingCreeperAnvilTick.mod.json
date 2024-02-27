@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "function",
   "definition": {
-    "code": "#summon armor_stand ~ ~ ~ {Invisible:1b,NoBasePlate:1b,DisabledSlots:4144959,Invulnerable:1b,Tags:[\"falling_exploding_anvils\",\"creeper_fea\"],ArmorItems:[{id:anvil,Count:1}],ArmorDropChances:[f]}\nexecute as @e[tag=creeper_fea] unless block ~ ~-0.01 ~ air run function explosive_anvils:explode_creeper_falling_explosive_anvil\nexecute as @e[tag=creeper_fea] if score @s catick_delay matches ..2 run scoreboard players add @s catick_delay 1\nexecute as @e[tag=creeper_fea] if score @s catick_delay matches 1 run function explosive_anvil:release_the_creepers",
+    "code": "#summon armor_stand ~ ~ ~ {Invisible:1b,NoBasePlate:1b,DisabledSlots:4144959,Invulnerable:1b,Tags:[\"falling_exploding_anvils\",\"creeper_fea\"],ArmorItems:[{id:anvil,Count:1}],ArmorDropChances:[f]}\nexecute as @e[tag=creeper_fea] unless block ~ ~-0.1 ~ air run function explosive_anvils:explode_creeper_falling_explosive_anvil",
     "name": "falling_creeper_anvil_tick",
     "namespace": "mod"
   }

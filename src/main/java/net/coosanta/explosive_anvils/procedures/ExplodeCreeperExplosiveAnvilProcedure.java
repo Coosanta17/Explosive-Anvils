@@ -10,8 +10,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
-
 import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModBlocks;
 
 public class ExplodeCreeperExplosiveAnvilProcedure {
@@ -21,30 +19,6 @@ public class ExplodeCreeperExplosiveAnvilProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"summon minecraft:tnt");
-		new Object() {
-			private int ticks = 0;
-
-			public void startDelay(LevelAccessor world) {
-				ServerTickEvents.END_SERVER_TICK.register((server) -> {
-					this.ticks++;
-					if (this.ticks == 1) {
-						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performPrefixedCommand(
-									new CommandSourceStack(CommandSource.NULL, new Vec3((x + 4), y, (z + 4)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "summon minecraft:creeper");
-						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performPrefixedCommand(
-									new CommandSourceStack(CommandSource.NULL, new Vec3((x + 4), y, (z - 4)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "summon minecraft:creeper");
-						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performPrefixedCommand(
-									new CommandSourceStack(CommandSource.NULL, new Vec3((x - 4), y, (z + 4)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "summon minecraft:creeper");
-						if (world instanceof ServerLevel _level)
-							_level.getServer().getCommands().performPrefixedCommand(
-									new CommandSourceStack(CommandSource.NULL, new Vec3((x - 4), y, (z - 4)), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "summon minecraft:creeper");
-						return;
-					}
-				});
-			}
-		}.startDelay(world);
+					"function explosive_anvils:explode_creeper_falling_explosive_anvil");
 	}
 }

@@ -25,9 +25,6 @@
       "locked_code": false,
       "registry_name": "spawn_falling_explosive_anvil",
       "metadata": {
-        "files": [
-          "src/main/java/net/coosanta/explosive_anvils/procedures/SpawnFallingExplosiveAnvilProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "x",
@@ -264,52 +261,6 @@
       "path": "~/Creeper Explosive Anvil"
     },
     {
-      "name": "Config",
-      "type": "procedure",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "config",
-      "metadata": {
-        "files": [
-          "src/main/java/net/coosanta/explosive_anvils/procedures/ConfigProcedure.java"
-        ],
-        "dependencies": []
-      }
-    },
-    {
-      "name": "CheckConfigExplosiveAnvil",
-      "type": "procedure",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "check_config_explosive_anvil",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "blockstate",
-            "type": "blockstate"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "FuncLoad",
       "type": "function",
       "sortid": 19,
@@ -413,20 +364,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/explosive_anvils/functions/explode_creeper_falling_explosive_anvil.mcfunction"
-        ]
-      },
-      "path": "~/Creeper Explosive Anvil"
-    },
-    {
-      "name": "ReleaseTheCreepers",
-      "type": "function",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "release_the_creepers",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/explosive_anvils/functions/release_the_creepers.mcfunction"
         ]
       },
       "path": "~/Creeper Explosive Anvil"

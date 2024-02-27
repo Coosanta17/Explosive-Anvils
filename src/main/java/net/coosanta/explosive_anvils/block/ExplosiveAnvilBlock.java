@@ -35,7 +35,6 @@ import net.fabricmc.api.EnvType;
 
 import net.coosanta.explosive_anvils.procedures.SpawnFallingExplosiveAnvilProcedure;
 import net.coosanta.explosive_anvils.procedures.ExplodeFallingExplosiveAnvilProcedure;
-import net.coosanta.explosive_anvils.procedures.CheckConfigExplosiveAnvilProcedure;
 import net.coosanta.explosive_anvils.init.ExplosiveAnvilsModBlocks;
 
 import java.util.List;
@@ -100,7 +99,7 @@ public class ExplosiveAnvilBlock extends Block {
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
-		CheckConfigExplosiveAnvilProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
+		SpawnFallingExplosiveAnvilProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 	}
 
 	@Override

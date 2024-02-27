@@ -152,7 +152,7 @@
       "name": "ExplodeFallingExplosiveAnvil"
     },
     "onBlockAdded": {
-      "name": "CheckConfigExplosiveAnvil"
+      "name": "SpawnFallingExplosiveAnvil"
     },
     "onNeighbourBlockChanges": {
       "name": "SpawnFallingExplosiveAnvil"

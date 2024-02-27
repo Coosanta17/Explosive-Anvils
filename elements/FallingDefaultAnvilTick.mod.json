@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "function",
   "definition": {
-    "code": "#summon armor_stand ~ ~ ~ {Invisible:1b,NoBasePlate:1b,DisabledSlots:4144959,Invulnerable:1b,Tags:[\"falling_exploding_anvils\",\"default_fea\"],ArmorItems:[{id:anvil,Count:1}],ArmorDropChances:[f]}\nexecute as @e[tag=default_fea] unless block ~ ~-0.01 ~ air run function explosive_anvils:explode_default_falling_explosive_anvil",
+    "code": "#summon armor_stand ~ ~ ~ {Invisible:1b,NoBasePlate:1b,DisabledSlots:4144959,Invulnerable:1b,Tags:[\"falling_exploding_anvils\",\"default_fea\"],ArmorItems:[{id:anvil,Count:1}],ArmorDropChances:[f]}\nexecute as @e[tag=default_fea] unless block ~ ~-0.1 ~ air run function explosive_anvils:explode_default_falling_explosive_anvil",
     "name": "falling_default_anvil_tick",
     "namespace": "mod"
   }
