@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "explosive_anvils",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "name": "Explosive Anvils",
   "description": "Adds anvils, that explode!",
   "authors": [
