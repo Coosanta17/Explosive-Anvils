@@ -1,9 +1,0 @@
-{
-  "_fv": 57,
-  "_type": "function",
-  "definition": {
-    "code": "#add scoreboard objectives\nexecute run scoreboard objectives add atick_delay\nexecute run scoreboard objectives add catick_delay\n\n#sets tick_delay to zero\nexecute run scoreboard players set Coosanta atick_delay 0",
-    "name": "anvil_load",
-    "namespace": "mod"
-  }
-}

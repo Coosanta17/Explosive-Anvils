@@ -1,34 +1,41 @@
 {
-  "schemaVersion": 1,
-  "id": "explosive_anvils",
-  "version": "0.1.7",
-  "name": "Explosive Anvils",
-  "description": "Adds anvils, that explode!",
-  "authors": [
-    "Coosanta"
-  ],
-  "contact": {
-    "homepage": "https://github.com/Coosanta17/Explosive-Anvils",
-    "sources": ""
-  },
-  "license": "GNU Lesser General Public License version 2.1 (LGPLv2.1)",
-  "icon": "assets/explosive_anvils/icon.png",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.coosanta.explosive_anvils.ExplosiveAnvilsMod"
-    ],
-    "client": [
-      "net.coosanta.explosive_anvils.ClientInit"
-    ]
-  },
-  "depends": {
-    "fabricloader": ">=0.14.21",
-    "fabric": "*",
-    "minecraft": "~1.20",
-    "java": ">=17"
-  },
-  "mixins": [
-    "explosive_anvils.mixins.json"
-  ]
+	"schemaVersion": 1,
+	"id": "explosive-anvils",
+	"version": "${version}",
+	"name": "Explosive Anvils",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/explosive-anvils/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.coosanta.explosive_anvils.ExplosiveAnvils"
+		],
+		"client": [
+			"net.coosanta.explosive_anvils.ExplosiveAnvilsClient"
+		]
+	},
+	"mixins": [
+		"explosive-anvils.mixins.json",
+		{
+			"config": "explosive-anvils.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
 }
