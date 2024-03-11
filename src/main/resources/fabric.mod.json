@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.coosanta.explosive_anvils.ExplosiveAnvils"
+			"com.coosanta.explosiveanvils.ExplosiveAnvils"
 		],
 		"client": [
-			"net.coosanta.explosive_anvils.ExplosiveAnvilsClient"
+			"com.coosanta.explosiveanvils.ExplosiveAnvilsClient"
 		]
 	},
 	"mixins": [

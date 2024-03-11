@@ -1,4 +1,4 @@
-package net.coosanta.explosive_anvils.mixin.client;
+package com.coosanta.explosiveanvils.mixin.client;
 
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;

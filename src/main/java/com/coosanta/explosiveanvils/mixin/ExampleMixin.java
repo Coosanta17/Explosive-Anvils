@@ -1,4 +1,4 @@
-package net.coosanta.explosive_anvils.mixin;
+package com.coosanta.explosiveanvils.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

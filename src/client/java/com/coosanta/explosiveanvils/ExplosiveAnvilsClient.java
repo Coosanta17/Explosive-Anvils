@@ -1,4 +1,4 @@
-package net.coosanta.explosive_anvils;
+package com.coosanta.explosiveanvils;
 
 import net.fabricmc.api.ClientModInitializer;
 
