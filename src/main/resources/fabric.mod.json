@@ -16,21 +16,17 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.coosanta.explosiveanvils.ExplosiveAnvils"
+			"net.coosanta.explosive_anvils.ExplosiveAnvils"
 		],
-		"client": [
-			"com.coosanta.explosiveanvils.ExplosiveAnvilsClient"
+		"fabric-datagen": [
+			"net.coosanta.explosive_anvils.ExplosiveAnvilsDataGenerator"
 		]
 	},
 	"mixins": [
-		"explosive-anvils.mixins.json",
-		{
-			"config": "explosive-anvils.client.mixins.json",
-			"environment": "client"
-		}
+		"explosive-anvils.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.15.7",
+		"fabricloader": ">=0.15.9",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
