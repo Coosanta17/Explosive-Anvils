@@ -1,5 +1,6 @@
 package net.coosanta.explosive_anvils;
 
+import net.coosanta.explosive_anvils.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -15,6 +16,7 @@ public class ExplosiveAnvils implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Anvils go boom boom!");
+		ModItems.registerModItems();
 	}
 }
