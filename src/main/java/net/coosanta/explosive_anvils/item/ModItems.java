@@ -12,9 +12,11 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item ANVILITE = registerItem("anvilite", new Item(new FabricItemSettings()));
+    public static final Item EEEEE = registerItem("eeeee", new Item(new FabricItemSettings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries){
         entries.add(ANVILITE);
+        entries.add(EEEEE);
     }
 
     private static Item registerItem(String name, Item item){
